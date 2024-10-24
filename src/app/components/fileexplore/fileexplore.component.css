@@ -1,0 +1,30 @@
+.ExploreParent {
+  background-color: var(--background-colorli);
+}
+.ExploreItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em;
+  border-bottom: 1px dashed var(--text-colorli);
+}
+.ExploreItem:last-child {
+  border: 0;
+}
+.ExploreItem > p.Emoji {
+  margin: auto 0 auto 0;
+}
+.ItemDetails > p:last-child {
+  font-size: var(--text-sm);
+}
+.ItemSettings {
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+  margin-left: auto;
+  cursor: pointer;
+  border-radius: 0.5em;
+}
+.ItemSettings:hover {
+  background-color: var(--text-colorli);
+}

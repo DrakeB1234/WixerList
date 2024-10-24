@@ -1,0 +1,19 @@
+<div class="ListContainer">
+@if(categoryList !== null){
+    @for(item of categoryList.items; track $index) {
+        @if($index === 0 || item.category !== categoryList.items[($index - 1)].category) {
+            <div class="ListCategory">
+                <h1>{{item.category}}</h1>
+            </div>
+        }
+        <div class="ListItem">
+            <p>{{item.item}}</p>
+            <div>
+                <svg class="icon">
+                    <use href="#edit-icon"></use>
+                </svg>
+            </div>
+        </div>
+    }
+}
+</div>

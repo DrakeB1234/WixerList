@@ -4,30 +4,127 @@
     padding: 0;
     box-sizing: border-box;
 }
-  
+/* Light theme */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;  
+    --accent-color: #e74c3c;    
+    --background-color1: #f4f4f4;  
+    --background-color2: #e9e9ea;  
+    --background-colorli: #fcfcfc;  
+    --text-color: #2c3e50;   
+    --text-colorli: #d4dce4;  
+    --shadow: rgb(0,0,0,0.1);     
+    
+    --text-sm: 0.8rem;
+    --text-base: 1rem;
+    --text-med: 1.1rem;
+    --text-lg: 1.3rem;
+    --text-xl: 1.5rem;
+}
+/* Dark theme */
+.dark-mode {
+    --background-color1: #252528;  
+    --background-color2: #2d2d34;  
+    --background-colorli: #545572;  
+    --text-color: #efefef;   
+    --text-colorli: #a9afc5;  
+}
 html, body {
     height: 100%;
 }
-
 body {
     line-height: 1.5;
     font-family: sans-serif;
 }
-
 img, picture, video, canvas {
     max-width: 100%;
     display: block;
 }
-
 input, button, textarea, select {
     font: inherit;
 }
-
 a {
     text-decoration: none;
     color: inherit;
 }
-
 ul, ol {
     list-style: none;
+}
+p, h1, h2, h3, h4, h5 {
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--text-color);
+}
+svg, symbol {
+    height: 25px;
+    width: 25px;
+    color: var(--text-color);
+}
+div.selected > svg, div.selected > p  {
+    color: var(--primary-color);
+}
+div.warn > svg, div.warn > p  {
+    color: rgb(236, 95, 95);
+}
+
+/* App Component Root Container */
+div.RootParent {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color2);
+}
+div.RootContainer {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    background-color: var(--background-color1);
+}
+
+/* Emoji */
+.Emoji {
+    font-size: var(--text-lg);
+}
+
+/* List Style */
+div.ListContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1;
+    background-color: var(--background-colorli);
+}
+div.ListItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dashed var(--text-colorli);
+    padding-right: 0.2em;
+}
+div.ListItem > p {
+    padding: 0.5em;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+div.ListItem > div {
+    display: flex;
+    align-items: center;
+    padding: 0.3em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+div.ListItem > div:hover {
+    background-color: var(--text-colorli);
+}
+/* Category */
+div.ListCategory {
+    padding: 0.5em;
+    border-bottom: 1px solid var(--text-color);
+}
+div.ListCategory > h1 {
+    font-size: var(--text-med);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+div.ListCategory:not(:first-child) {
+    margin-top: 1em;
 }

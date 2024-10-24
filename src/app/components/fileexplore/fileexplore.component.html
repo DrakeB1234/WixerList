@@ -1,0 +1,24 @@
+<div class="ExploreParent">
+  @if (lists) {
+    @for(list of lists.lists; track $index) {
+      <div class="ExploreItem">
+
+        @if (list.type == "grocery") { <p class="Emoji">🥕</p> }
+        @else if (list.type == "todo") { <p class="Emoji">📃</p> }
+        @else{ <p class="Emoji">✔</p> }
+
+        <div class="ItemDetails">
+          <h1>{{ list.name }}</h1>
+          @if (list.itemsRemaining) {
+            <p>{{ list.itemsRemaining === 1 ? list.itemsRemaining + ' item ' : list.itemsRemaining + ' items ' }}remaining</p>
+          }
+        </div>
+        <div class="ItemSettings">
+          <svg class="icon">
+            <use href="#settings-icon"></use>
+          </svg>
+        </div>
+      </div>
+    }
+  }
+</div>

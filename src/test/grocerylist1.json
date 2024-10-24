@@ -1,0 +1,31 @@
+{
+    "title": "Grocery List Drake",
+    "dateCreated": "01/20/2024",
+    "items": [
+        {
+            "item": "Cheeseasdfasdasdfaasdfasdfasdfasdfasdfasdfsdfasdfasdf",
+            "checked": false,
+            "category": "Dairy"
+        },
+        {
+            "item": "Milk",
+            "checked": true,
+            "category": "Dairy"
+        },
+        {
+            "item": "Creamer",
+            "checked": true,
+            "category": "Dairy"
+        },
+        {
+            "item": "Onion x2",
+            "checked": true,
+            "category": "Produce"
+        },
+        {
+            "item": "Aspargus",
+            "checked": true,
+            "category": "Produce"
+        }
+    ]
+}
